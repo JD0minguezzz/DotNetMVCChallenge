@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Asteroids near earth!";
+}
+<h1>@ViewData["Title"]</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Estimated diameter(m)</th>
+        <th>Close approach date</th>
+        <th>Relative velocity(Km/h)</th>
+        <th>Distance to earth(Km)</th>
+        <th>Dangerous?</th>
+    </tr>
+   
+   @foreach (var item in Model)
+   {
+       <tr>
+           <th>@item[0]</th>
+       </tr>
+   }
+</table>
