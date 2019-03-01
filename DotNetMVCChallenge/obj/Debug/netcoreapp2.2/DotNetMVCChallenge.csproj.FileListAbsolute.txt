@@ -30,3 +30,4 @@ C:\Users\jdominguez\OneDrive - ENDAVA\Documents\challenges\DotNetMVCChallenge\Do
 C:\Users\jdominguez\OneDrive - ENDAVA\Documents\challenges\DotNetMVCChallenge\DotNetMVCChallenge\obj\Debug\netcoreapp2.2\DotNetMVCChallenge.csproj.CopyComplete
 C:\Users\jdominguez\OneDrive - ENDAVA\Documents\challenges\DotNetMVCChallenge\DotNetMVCChallenge\bin\Debug\netcoreapp2.2\MyLibrary.dll
 C:\Users\jdominguez\OneDrive - ENDAVA\Documents\challenges\DotNetMVCChallenge\DotNetMVCChallenge\bin\Debug\netcoreapp2.2\MyLibrary.pdb
+C:\Users\jdominguez\OneDrive - ENDAVA\Documents\challenges\DotNetMVCChallenge\DotNetMVCChallenge\obj\Debug\netcoreapp2.2\Razor\Views\Home\Asteroids.g.cshtml.cs

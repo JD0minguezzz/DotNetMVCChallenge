@@ -23,7 +23,9 @@ namespace MyLibrary
         public class Asteroid
         {
             public string id { get; set; }
+            public string neo_reference_id { get; set; }
             public string name { get; set; }
+            public string nasa_jpl_url { get; set; }
             public float absolute_magnitude_h { get; set; }
             public Estimated_Diameter estimated_diameter { get; set; }
             public bool is_potentially_hazardous_asteroid { get; set; }
@@ -33,10 +35,31 @@ namespace MyLibrary
 
         public class Estimated_Diameter
         {
+            public Kilometers kilometers { get; set; }
             public Meters meters { get; set; }
+            public Miles miles { get; set; }
+            public Feet feet { get; set; }
+        }
+
+        public class Kilometers
+        {
+            public float estimated_diameter_min { get; set; }
+            public float estimated_diameter_max { get; set; }
         }
 
         public class Meters
+        {
+            public float estimated_diameter_min { get; set; }
+            public float estimated_diameter_max { get; set; }
+        }
+
+        public class Miles
+        {
+            public float estimated_diameter_min { get; set; }
+            public float estimated_diameter_max { get; set; }
+        }
+
+        public class Feet
         {
             public float estimated_diameter_min { get; set; }
             public float estimated_diameter_max { get; set; }
@@ -65,5 +88,6 @@ namespace MyLibrary
             public string kilometers { get; set; }
             public string miles { get; set; }
         }
+
     }
 }
