@@ -1,4 +1,4 @@
-﻿@model IDictionary<float, MyLibrary.AsteroidInformation.Asteroid>
+﻿@model List<Tuple<MyLibrary.AsteroidInformation.Asteroid, float>>
 @{
     ViewData["Title"] = "Asteroids Information";
 }
@@ -84,14 +84,14 @@
             @foreach (var item in Model)
             {
             <tr>
-                <td>@item.Value.id</td>
-                <td>@item.Value.name</td>
-                <td>@item.Value.estimated_diameter.meters.estimated_diameter_max</td>
-                <td>@item.Value.close_approach_data[0].close_approach_date</td>
-                <td>@item.Value.close_approach_data[0].relative_velocity.kilometers_per_hour</td>
-                <td>@item.Value.close_approach_data[0].miss_distance.kilometers</td>
-                <td>@item.Value.is_potentially_hazardous_asteroid</td>
-                <td>@item.Key</td>
+                <td>@item.Item1.id</td>
+                <td>@item.Item1.name</td>
+                <td>@item.Item1.estimated_diameter.meters.estimated_diameter_max</td>
+                <td>@item.Item1.close_approach_data[0].close_approach_date</td>
+                <td>@item.Item1.close_approach_data[0].relative_velocity.kilometers_per_hour</td>
+                <td>@item.Item1.close_approach_data[0].miss_distance.kilometers</td>
+                <td>@item.Item1.is_potentially_hazardous_asteroid</td>
+                <td>@item.Item2</td>
             </tr>
             }  
         </table>

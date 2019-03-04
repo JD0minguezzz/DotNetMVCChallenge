@@ -22,7 +22,8 @@ namespace DotNetMVCChallenge.Controllers
         public IActionResult Asteroids(string startDate, string endDate)
         {
             //var astrItems = new List<Asteroid>();
-            Dictionary<float, AsteroidInformation.Asteroid> astrItems = new Dictionary<float, AsteroidInformation.Asteroid>();
+            //Dictionary<float, AsteroidInformation.Asteroid> astrItems = new Dictionary<float, AsteroidInformation.Asteroid>();
+            var astrItems = new List<Tuple<AsteroidInformation.Asteroid, float>>();
             var webClient = new WebClient();
             string json;
             AsteroidInformation.RootObject deserializedJson;
@@ -41,7 +42,7 @@ namespace DotNetMVCChallenge.Controllers
                 foreach (AsteroidInformation.Asteroid asteroid in astrDictionary.Value)
                 {
                     float timeToReach = float.Parse(asteroid.close_approach_data[0].miss_distance.kilometers) / 299792;
-                    astrItems.Add(timeToReach, asteroid);
+                    astrItems.Add(new Tuple<AsteroidInformation.Asteroid, float>(asteroid, timeToReach));
                 }
             }
             return View(astrItems);
